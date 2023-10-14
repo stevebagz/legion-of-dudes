@@ -93,23 +93,7 @@ button:hover {
 
 /***** Media Queries *****/
 
-/* Style used until the viewport reaches 350px width */
-@media screen and (max-width: 350px){
-    .indbuttons {
-        font-size: 20px;
-        margin: 3px;
-        height: 55px;
-    }
-
-    .screentitle {
-        font-size: 32px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    
-}
-
-/* Style used until the viewport reaches 375px width */
+/* Style used, after the the viewport reaches 350px until it reaches 375px width */
 @media screen and (max-width: 375px){
     .indbuttons {
         font-size: 28px;
@@ -132,6 +116,22 @@ button:hover {
     .articlepic {
         height: 200px;
         width: 225px;
+    }
+    
+}
+
+/* Style used until the viewport reaches 350px width */
+@media screen and (max-width: 350px){
+    .indbuttons {
+        font-size: 20px;
+        margin: 3px;
+        height: 55px;
+    }
+
+    .screentitle {
+        font-size: 32px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
     
 }
