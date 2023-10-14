@@ -1,3 +1,14 @@
+/** I've moved some of the CSS around. I find it easiest to put things in sections.
+I start with global things, or "defaults" and then break things into like Typography (Text styles), Link styles,
+button styles, etc etc. It makes it a little easier to find things, and if someone else is jumping in to read your
+code, it'll help them out.
+
+The other major change, which we can review this evening on our call, has to do with media queries. I've changed 
+the order so the widest widths are declared first. If there are multiple style definitions, that both meet a 
+condition (IE: Until the screen reaches 375px of width), whichever style is declared last will be used since 
+technically, both are true for everything less than 375px. With this in mind, always declare the widest first (375px in this case) on to the most narrow, in descending order
+(350px in this example). I'll explain more on our call. 
+
 /***** Global Declarations *****/
 
 body {
