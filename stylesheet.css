@@ -1,49 +1,43 @@
-@media screen and (max-width: 375px){
-    .indbuttons {
-        font-size: 28px;
-        margin: 3px;
-        height: 65px;
-        
-    }
-    #homebutton {
-      
-        height: 50px;
-        width: 125px;
-        font-size: 28px;
-        
-    }
-    .articlepic {
-        height: 200px;
-        width: 225px;
-    }
+/** I've moved some of the CSS around. I find it easiest to put things in sections.
+I start with global things, or "defaults" and then break things into like Typography (Text styles), Link styles,
+button styles, etc etc. It makes it a little easier to find things, and if someone else is jumping in to read your
+code, it'll help them out.
+
+The other major change, which we can review this evening on our call, has to do with media queries. I've changed 
+the order so the widest widths are declared first. If there are multiple style definitions, that both meet a 
+condition (IE: Until the screen reaches 375px of width), whichever style is declared last will be used since 
+technically, both are true for everything less than 375px. With this in mind, always declare the widest first (375px in this case) on to the most narrow, in descending order
+(350px in this example). I'll explain more on our call. 
+
+/***** Global Declarations *****/
+
+body {
+    background-image: url(bg.jpeg);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    font-weight: 100px;
+    max-width: 800px; 
+    background-color: black;
+    color: rgb(247, 61, 244);
+    margin: auto;
+    text-align: center;
+    padding-top: 20px;
 }
 
-@media screen and (max-width: 350px){
-    .indbuttons {
-        font-size: 20px;
-        margin: 3px;
-        height: 55px;
-        
-    }    
+/* Link Styles */
+a {
+    color: yellow;
 }
 
-@media screen and (max-width: 375px){
-    .screentitle {
-        font-size: 38px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
+a:visited {
+    color: rgb(17, 198, 222)
 }
 
-@media screen and (max-width: 350px){
-    .screentitle {
-        font-size: 32px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
+a:hover {
+    color: rgb(113, 235, 6);
 }
 
-
+/* Typography */
 h1 {
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -60,26 +54,8 @@ h1 {
     padding-bottom: 6px;
     text-shadow: 0px 2px 1px rgb(145, 1, 145);
     border-style: ridge;
-    
-    
 }
 
-body {
-    background-image: url(bg.jpeg);
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
-    font-weight: 100px;
-    max-width: 800px; 
-    background-color: black;
-    color: rgb(247, 61, 244);
-    margin: auto;
-    text-align: center;
-    padding-top: 20px;
-    
-    
-    
-
-}
 .gentext {
     background-color: black;
     border: solid 7px rgb(255, 234, 0);
@@ -92,9 +68,9 @@ body {
     font-weight:lighter;
     margin-top: 45px; 
     padding-block: 15px;
-    
 }
 
+/* Button Styles */
 button {
     color:rgb(247, 61, 244);
     background-color: black;
@@ -107,23 +83,10 @@ button {
     border-style: ridge;
     text-shadow: 0px 1px 1px rgb(124, 0, 124);
     margin-bottom: 30px;
-    
-    
-    
 }
 
 button:hover {
     box-shadow: 0px 0px 15px rgb(255, 234, 0);
-}
-
-a {
-    color: yellow;
-}
-a:visited {
-    color: rgb(17, 198, 222)
-}
-a:hover {
-    color: rgb(113, 235, 6);
 }
 
 #indexbuttons {
@@ -131,12 +94,56 @@ a:hover {
     flex-direction: row;
     justify-content:space-between;
 }
+
 #homebutton {
-    
     margin: auto;
     font-size: 28px;
     padding-bottom: 5px;
     align-items: center;
+}
+
+/***** Media Queries *****/
+
+/* Style used, after the the viewport reaches 350px until it reaches 375px width */
+@media screen and (max-width: 375px){
+    .indbuttons {
+        font-size: 28px;
+        margin: 3px;
+        height: 65px;
+    }
+
+    .screentitle {
+        font-size: 38px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    #homebutton {
+        height: 50px;
+        width: 125px;
+        font-size: 28px;
+    }
+    
+    .articlepic {
+        height: 200px;
+        width: 225px;
+    }
+    
+}
+
+/* Style used until the viewport reaches 350px width */
+@media screen and (max-width: 350px){
+    .indbuttons {
+        font-size: 20px;
+        margin: 3px;
+        height: 55px;
+    }
+
+    .screentitle {
+        font-size: 32px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
     
 }
 
