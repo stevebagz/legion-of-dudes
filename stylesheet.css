@@ -97,7 +97,7 @@ a:hover {
     
 }
 
-@media screen and (max-width: 375px){
+@media screen and (max-width: 380px){
     .indbuttons {
         font-size: 24px;
         margin: 3px;
@@ -144,10 +144,14 @@ a:hover {
     }  
     #homebutton {
       
-        height: 100px;
-        width: 150px;
+        height: 50px;
+        width: 125px;
         scale: 100%;
-}
+        border: solid 9px rgb(255, 234, 0);
+        border-style: ridge;
+        font-size: 24px;
+        
+    }  
 
     .screentitle {
         font-size: 32px;
