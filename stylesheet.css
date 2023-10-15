@@ -99,7 +99,7 @@ a:hover {
 
 @media screen and (max-width: 375px){
     .indbuttons {
-        font-size: 20px;
+        font-size: 24px;
         margin: 3px;
         height: 65px;
     }    
@@ -113,9 +113,11 @@ a:hover {
       
         height: 50px;
         width: 125px;
-        scale: 70%;
+        scale: 100%;
         border: solid 9px rgb(255, 234, 0);
         border-style: ridge;
+        font-size: 24px;
+        
     }  
 
 
@@ -144,7 +146,7 @@ a:hover {
       
         height: 100px;
         width: 150px;
-        scale: 70%;
+        scale: 100%;
 }
 
     .screentitle {
